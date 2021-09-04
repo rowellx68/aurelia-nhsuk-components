@@ -1,11 +1,8 @@
 {
-  "name": "nhsuk-components-au",
-  "description": "An Aurelia plugin project.",
-  "version": "0.1.0",
-  "repository": {
-    "type": "???",
-    "url": "???"
-  },
+  "name": "aurelia-nhsuk-components",
+  "description": "An Aurelia implementation of the NHS's component library. ",
+  "version": "0.0.0",
+  "repository": "https://github.com/rowellx68/aurelia-nhsuk-components",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.23",
@@ -62,7 +59,6 @@
   },
   "main": "dist/commonjs/index.js",
   "module": "dist/native-modules/index.js",
-  "private": true,
   "files": [
     "dist",
     "src"
