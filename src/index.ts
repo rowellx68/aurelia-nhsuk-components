@@ -7,6 +7,9 @@ export function configure(config: FrameworkConfiguration): void {
     PLATFORM.moduleName('./elements/icons/chevron-left'),
 
     PLATFORM.moduleName('./elements/action-link/action-link'),
-    PLATFORM.moduleName('./elements/back-link/back-link')
+    PLATFORM.moduleName('./elements/back-link/back-link'),
+    PLATFORM.moduleName('./elements/breadcrumb/breadcrumb'),
+    PLATFORM.moduleName('./elements/breadcrumb/breadcrumb-back'),
+    PLATFORM.moduleName('./elements/breadcrumb/breadcrumb-list')
   ]);
 }
