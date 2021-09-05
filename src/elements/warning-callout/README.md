@@ -15,5 +15,5 @@
 | Property | Type | Default |
 |----------|------|---------|
 |`class`|`string`|none|
-|`labelPrefix`|`string`|none|
+|`label-prefix`|`string`|none|
 |`label`|`string`|none|

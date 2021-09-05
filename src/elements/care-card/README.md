@@ -26,5 +26,5 @@
 | Property | Type | Default |
 |----------|------|---------|
 |`class`|`string`|none|
-|`headingPrefix`|`string`|none|
+|`heading-prefix`|`string`|none|
 |`heading`|`string`|none|
