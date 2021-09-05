@@ -15,13 +15,14 @@ describe('warning-callout element', () => {
   it('binds all the bindable properties', async () => {
     const model = {
       class: 'some-other-class-test',
+      labelPrefix: 'Important:',
       label: 'School, nursery or work'
     };
 
     component = StageComponent
       .withResources('elements/warning-callout/warning-callout')
       .inView(`
-        <warning-callout class.bind="class" label.bind="label">
+        <warning-callout class.bind="class" label-prefix.bind="labelPrefix" label.bind="label">
           <p>Stay away from school, nursery or work.</p>
         </warning-callout>
       `)
@@ -30,10 +31,11 @@ describe('warning-callout element', () => {
     await component.create(bootstrap);
 
     const view = component.element;
-    const label = view.querySelector('.nhs-warning-callout__label');
+    const label = view.querySelector('.nhsuk-warning-callout__label');
     const paragraph = view.querySelector('p');
 
     expect(view.classList).toContain(model.class);
+    expect(label.textContent.trim()).toContain(model.labelPrefix);
     expect(label.textContent.trim()).toContain(model.label);
     expect(paragraph.textContent.trim()).toBe('Stay away from school, nursery or work.');
   });
