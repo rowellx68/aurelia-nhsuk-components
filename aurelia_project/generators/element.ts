@@ -15,8 +15,9 @@ export default class ElementGenerator {
     let className = this.project.makeClassName(name);
 
     this.project.elements.add(
-      ProjectItem.text(`${fileName}.ts`, this.generateJSSource(className)),
-      ProjectItem.text(`${fileName}.html`, this.generateHTMLSource(className))
+      ProjectItem.text(`${fileName}/${fileName}.ts`, this.generateJSSource(className)),
+      ProjectItem.text(`${fileName}/__tests__/${fileName}.spec.ts`, this.generateTestSource(className, fileName)),
+      ProjectItem.text(`${fileName}/README.md`, this.generateReadMe())
     );
 
     await this.project.commitChanges();
@@ -24,22 +25,58 @@ export default class ElementGenerator {
   }
 
   generateJSSource(className) {
-    return `import {bindable} from 'aurelia-framework';
+    return `import { bindable, containerless, inlineView } from 'aurelia-framework';
 
+@inlineView(\`
+<template>
+  
+</template>
+\`)
+@containerless
 export class ${className} {
-  @bindable value;
-
-  valueChanged(newValue, oldValue) {
-    //
-  }
+  @bindable
+  public class = '';
 }
 `;
   }
 
-  generateHTMLSource(className) {
-    return `<template>
-  <h1>\${value}</h1>
-</template>
+  generateTestSource(className, fileName) {
+    return `import { ComponentTester, StageComponent } from 'aurelia-testing';
+import { bootstrap } from 'aurelia-bootstrapper';
+import { ${className} } from 'elements/${fileName}/${fileName}';
+
+describe('${fileName} element', () => {
+  let component: ComponentTester<${className}>;
+
+  afterEach(() => {
+    if (component) {
+      component.dispose();
+      component = null;
+    }
+  });
+
+  it('binds all the bindable properties', async () => {
+    const model = {
+      class: 'some-other-class-test'
+    };
+
+    component = StageComponent
+      .withResources('elements/${fileName}/${fileName}')
+      .inView('<${fileName} class.bind="class">CHILD_ELEMENT</${fileName}>')
+      .boundTo(model);
+
+    await component.create(bootstrap);
+  });
+});
+`;
+  }
+
+  generateReadMe() {
+    return `## Usage
+
+
+## Bindable properties
+
 `;
   }
 }
