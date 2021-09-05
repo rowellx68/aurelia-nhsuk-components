@@ -10,6 +10,7 @@ export function configure(config: FrameworkConfiguration): void {
     PLATFORM.moduleName('./elements/back-link/back-link'),
     PLATFORM.moduleName('./elements/breadcrumb/breadcrumb'),
     PLATFORM.moduleName('./elements/breadcrumb/breadcrumb-back'),
-    PLATFORM.moduleName('./elements/breadcrumb/breadcrumb-list')
+    PLATFORM.moduleName('./elements/breadcrumb/breadcrumb-list'),
+    PLATFORM.moduleName('./elements/warning-callout/warning-callout')
   ]);
 }

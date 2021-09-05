@@ -1,5 +1,7 @@
 <template>
-  <action-link disabled="true" class="some-other-class" href="#">Find out more</action-link>
+  <action-link disabled="true" class="some-other-class" href="#"
+    >Find out more</action-link
+  >
   <back-link class="some-other-class" href="#">Back</back-link>
 
   <breadcrumb aria-label="TEST">
@@ -9,4 +11,11 @@
     </breadcrumb-list>
     <breadcrumb-back href="#">Back to page 1</breadcrumb-back>
   </breadcrumb>
+
+  <warning-callout label-prefix="Important:" label="School, nursery or work">
+    <p>
+      Stay away from school, nursery or work until all the spots have crusted
+      over. This is usually 5 days after the spots first appeared.
+    </p>
+  </warning-callout>
 </template>
