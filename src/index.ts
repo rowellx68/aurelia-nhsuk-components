@@ -11,6 +11,7 @@ export function configure(config: FrameworkConfiguration): void {
     PLATFORM.moduleName('./elements/breadcrumb/breadcrumb'),
     PLATFORM.moduleName('./elements/breadcrumb/breadcrumb-back'),
     PLATFORM.moduleName('./elements/breadcrumb/breadcrumb-list'),
+    PLATFORM.moduleName('./elements/care-card/care-card'),
     PLATFORM.moduleName('./elements/warning-callout/warning-callout')
   ]);
 }
