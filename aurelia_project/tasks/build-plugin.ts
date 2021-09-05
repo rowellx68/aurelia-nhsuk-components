@@ -24,6 +24,7 @@ let build = gulp.series(
     pluginJson('dist/commonjs'),
     buildPluginJavaScript('dist/commonjs', 'commonjs'),
   ), (done) => {
+    del('dist/**/__tests__');
     console.log('Finish building Aurelia plugin to dist/commonjs and dist/native-modules.');
     done();
   }
