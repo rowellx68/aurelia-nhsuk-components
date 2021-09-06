@@ -29,8 +29,7 @@ describe('action-link element', () => {
     const view = component.element;
     const link = component.element.querySelector('a');
 
-    expect(view.className).toBe('nhsuk-action-link');
-    expect(link.classList).toContain(model.class);
+    expect(view.classList).toContain(model.class);
     expect(link.href).toBe(model.href);
     expect(link.target).toBe(model.target);
     expect(link.textContent.trim()).toBe('Get more information');

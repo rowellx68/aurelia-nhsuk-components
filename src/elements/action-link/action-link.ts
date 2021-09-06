@@ -2,11 +2,11 @@ import { bindable, containerless, inlineView } from 'aurelia-framework';
 
 @inlineView(`
 <template>
-  <div class="nhsuk-action-link">
+  <div class="nhsuk-action-link" class.bind="class">
     <a
       href.bind="href"
       target.bind="target"
-      class="nhsuk-action-link__link \${class}"
+      class="nhsuk-action-link__link"
     >
       <icon-arrow-right-circle></icon-arrow-right-circle>
       <span class="nhsuk-action-link__text">

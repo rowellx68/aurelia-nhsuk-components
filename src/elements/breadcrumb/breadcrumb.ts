@@ -2,7 +2,7 @@ import { bindable, containerless, inlineView } from 'aurelia-framework';
 
 @inlineView(`
 <template>
-  <nav class="nhsuk-breadcrumb \${class}" aria-label.bind="ariaLabel">
+  <nav class="nhsuk-breadcrumb" class.bind="class" aria-label.bind="ariaLabel">
     <div class="nhsuk-width-container">
       <slot></slot>
     </div>

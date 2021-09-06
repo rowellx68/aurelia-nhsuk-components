@@ -2,7 +2,7 @@ import { bindable, containerless, inlineView } from 'aurelia-framework';
 
 @inlineView(`
 <template>
-  <details class="nhsuk-details \${class}" open.bind="expanded">
+  <details class="nhsuk-details" class.bind="class" open.bind="expanded">
     <summary
       class="nhsuk-details__summary"
       role="button"

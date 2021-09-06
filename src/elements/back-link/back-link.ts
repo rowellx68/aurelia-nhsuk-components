@@ -2,9 +2,9 @@ import { bindable, containerless, inlineView } from 'aurelia-framework';
 
 @inlineView(`
 <template>
-  <div class="nhsuk-back-link">
+  <div class="nhsuk-back-link" class.bind="class">
     <a
-      class="nhsuk-back-link__link \${class}"
+      class="nhsuk-back-link__link"
       href.bind="href"
     >
       <icon-chevron-left></icon-chevron-left>

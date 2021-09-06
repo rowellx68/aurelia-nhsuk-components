@@ -22,7 +22,7 @@ const processor = (_vc: ViewCompiler, _vr: ViewResources, node: HTMLElement, _bi
 
 @inlineView(`
 <template>
-  <ol class="nhsuk-breadcrumb__list \${class}">
+  <ol class="nhsuk-breadcrumb__list" class.bind="class">
   <template replaceable part="links"></template>
   </ol>
 </template>

@@ -2,7 +2,7 @@ import { bindable, containerless, inlineView } from 'aurelia-framework';
 
 @inlineView(`
 <template>
-  <div class="nhsuk-warning-callout \${class}">
+  <div class="nhsuk-warning-callout" class.bind="class">
     <h3 class="nhsuk-warning-callout__label">
       <span role="text">
         <span class="nhsuk-u-visually-hidden">\${labelPrefix} </span>

@@ -2,7 +2,7 @@ import { bindable, containerless, inlineView } from 'aurelia-framework';
 
 @inlineView(`
 <template>
-  <p class="nhsuk-breadcrumb__back \${class}">
+  <p class="nhsuk-breadcrumb__back" class.bind="class">
     <a
       class="nhsuk-breadcrumb__backlink"
       href.bind="href"

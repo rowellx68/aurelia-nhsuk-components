@@ -2,7 +2,7 @@ import { bindable, containerless, inlineView } from 'aurelia-framework';
 
 @inlineView(`
 <template>
-  <div class="nhsuk-inset-text \${class}">
+  <div class="nhsuk-inset-text" class.bind="class">
     <span class="nhsuk-u-visually-hidden">\${textPrefix} </span>
     <slot></slot>
   </div>

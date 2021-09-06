@@ -28,8 +28,7 @@ describe('back-link element', () => {
     const view = component.element;
     const link = component.element.querySelector('a');
 
-    expect(view.className).toBe('nhsuk-back-link');
-    expect(link.classList).toContain(model.class);
+    expect(view.classList).toContain(model.class);
     expect(link.href).toBe(model.href);
     expect(link.textContent.trim()).toBe('Back');
   });

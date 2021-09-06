@@ -4,7 +4,7 @@ const validUrgency = ['non-urgent', 'urgent', 'immediate'];
 
 @inlineView(`
 <template>
-  <div class="nhsuk-care-card nhsuk-care-card--\${urgency} \${class}">
+  <div class="nhsuk-care-card nhsuk-care-card--\${urgency}" class.bind="class">
     <div class="nhsuk-care-card__heading-container">
       <h3 class="nhsuk-care-card__heading">
         <span role="text">
