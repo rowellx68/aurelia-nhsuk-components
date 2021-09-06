@@ -73,10 +73,15 @@ describe('${fileName} element', () => {
 
   generateReadMe() {
     return `## Usage
+\`\`\`html
 
+\`\`\`
 
 ## Bindable properties
 
+| Property | Type | Default |
+|----------|------|---------|
+|\`class\`|\`string\`|none|
 `;
   }
 }
